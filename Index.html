@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- MOBILE FIX -->
-  <title>Team Ruthless Username Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Team Ruthless Username Generator</title>
   <style>
     body {
       margin: 0;
@@ -123,12 +122,10 @@
   </style>
 </head>
 <body>
-  <!-- Logo -->
   <div class="logo">
     <img src="https://i.postimg.cc/FFwNjK9s/Picsart-25-09-01-17-01-57-928.jpg" alt="TR Logo">
   </div>
 
-  <!-- Card -->
   <div class="card">
     <h1>Welcome to Team Ruthless!</h1>
     <p>আপনাকে Team Ruthless এ স্বাগতম! 🔥<br>
@@ -169,6 +166,8 @@
       const resultDiv = document.getElementById("result");
       const errorDiv = document.getElementById("error");
       const copyBtn = document.getElementById("copyBtn");
+      
+      const maxNameLength = 6; 
 
       resultDiv.innerHTML = "";
       errorDiv.innerHTML = "";
@@ -178,12 +177,12 @@
         errorDiv.innerText = "Please enter a Username / একটি নাম লিখুন।";
         return;
       }
-
-      if (nameInput.length > 12) {
-        errorDiv.innerText = "Username too long! Please shorten. / নামটি খুব লম্বা, ছোট করুন।";
-        return;
+      
+      if (nameInput.length > maxNameLength) {
+          errorDiv.innerText = `Username too long! Please use ${maxNameLength} characters or less. / নামটি খুব লম্বা, ৬ অক্ষরের মধ্যে লিখুন।`;
+          return;
       }
-
+      
       let styled = styleText(nameInput);
       let suffix = gender === "male" ? "亗" : "♡";
       let finalName = `ᵀᴿㅤ${styled}${suffix}`;
@@ -200,4 +199,6 @@
     }
   </script>
 </body>
+</html>
+
 </html>
