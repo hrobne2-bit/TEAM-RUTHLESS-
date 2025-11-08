@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Team Ruthless Username Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Team Ruthless Username Generator</title>
   <style>
     body {
       margin: 0;
@@ -123,7 +124,7 @@
 </head>
 <body>
   <div class="logo">
-    <img src="https://i.postimg.cc/FFwNjK9s/Picsart-25-09-01-17-01-57-928.jpg" alt="TR Logo">
+    <img src="images/tr_logo.jpg" alt="TR Logo">
   </div>
 
   <div class="card">
@@ -167,7 +168,8 @@
       const errorDiv = document.getElementById("error");
       const copyBtn = document.getElementById("copyBtn");
       
-      const maxNameLength = 6; 
+      // ✅ MAX CHARACTER LIMIT IS NOW 8!
+      const maxNameLength = 8; 
 
       resultDiv.innerHTML = "";
       errorDiv.innerHTML = "";
@@ -179,7 +181,8 @@
       }
       
       if (nameInput.length > maxNameLength) {
-          errorDiv.innerText = `Username too long! Please use ${maxNameLength} characters or less. / নামটি খুব লম্বা, ৬ অক্ষরের মধ্যে লিখুন।`;
+          // ✅ ERROR MESSAGE UPDATED FOR 8 CHARACTERS
+          errorDiv.innerText = `Username too long! Please use ${maxNameLength} characters or less. / নামটি খুব লম্বা, ৮ অক্ষরের মধ্যে লিখুন।`;
           return;
       }
       
@@ -199,6 +202,4 @@
     }
   </script>
 </body>
-</html>
-
 </html>
