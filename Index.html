@@ -73,16 +73,20 @@
     }
 
     select, input {
-      /* FIXED: Input centering and display consistency */
+      /* FIXED: Reverting unnecessary margin tweaks, relying on 100% width in the centered card */
       width: 100%;
       padding: 10px;
       border: none;
       border-radius: 10px;
       outline: none;
-      margin: 0 auto 15px auto; /* Ensures vertical margin and centering */
-      display: block; /* Allows margin: auto to work */
+      margin-bottom: 15px; /* Keep this for spacing */
       font-size: 16px;
+      display: block; /* Ensure it behaves as a block element */
+      text-align: left; /* Ensure text starts at the left within the box */
     }
+    
+    /* NEW CSS FIX: Since the card text is centered, we need to ensure the input itself uses 100% width and aligns its internal content correctly. The input is now physically centered because the card is centered and it fills the card's width. */
+
 
     button {
       width: 100%;
@@ -188,6 +192,12 @@
         return;
       }
       
+      // NEW FIX 2: Check for spaces
+      if (nameInput.includes(' ')) {
+        errorDiv.innerText = "Username cannot contain spaces! / ইউজারনেমে কোনো ফাঁকা জায়গা থাকতে পারবে না।";
+        return;
+      }
+
       if (nameInput.length > maxNameLength) {
           errorDiv.innerText = `Username too long! Please use ${maxNameLength} characters or less. / নামটি খুব লম্বা, ৮ অক্ষরের মধ্যে লিখুন।`;
           return;
