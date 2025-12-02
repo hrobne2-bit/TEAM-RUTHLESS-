@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Team Ruthless Username Generator</title>
+
+  <meta name="description" content="Official Username Generator for Team Ruthless (TR) - Get your custom, stylized gaming tag now!">
+  <meta name="keywords" content="Team Ruthless, TR, Username Generator, Gaming Tag, Clan Name, Free Fire, PUBG, BGMI">
+  <meta name="author" content="Team Ruthless Developer">
+  <meta name="robots" content="index, follow"> 
+  
   <style>
     body {
       margin: 0;
@@ -67,12 +73,14 @@
     }
 
     select, input {
+      /* FIXED: Input centering and display consistency */
       width: 100%;
       padding: 10px;
       border: none;
       border-radius: 10px;
       outline: none;
-      margin-bottom: 15px;
+      margin: 0 auto 15px auto; /* Ensures vertical margin and centering */
+      display: block; /* Allows margin: auto to work */
       font-size: 16px;
     }
 
@@ -153,11 +161,12 @@
     const styledMap = {
       "a": "α", "b": "в", "c": "c", "d": "d", "e": "є", "f": "f", "g": "g",
       "h": "н", "i": "í", "j": "j", "k": "k", "l": "l", "m": "m", "n": "n",
-      "o": "σ", "p": "p", "q": "q", "r": "я", "s": "ѕ", "t": "t",
+      "o": "σ", "p": "p", "q": "p", "r": "я", "s": "ѕ", "t": "t",
       "u": "υ", "v": "v", "w": "w", "x": "χ", "y": "ч", "z": "z"
     };
 
     function styleText(text) {
+      // Style function only handles text from the 3rd character onwards (or 2nd if no 'o')
       return text.toLowerCase().split("").map(ch => styledMap[ch] || ch).join("");
     }
 
@@ -168,7 +177,6 @@
       const errorDiv = document.getElementById("error");
       const copyBtn = document.getElementById("copyBtn");
       
-      // ✅ MAX CHARACTER LIMIT IS NOW 8!
       const maxNameLength = 8; 
 
       resultDiv.innerHTML = "";
@@ -181,14 +189,37 @@
       }
       
       if (nameInput.length > maxNameLength) {
-          // ✅ ERROR MESSAGE UPDATED FOR 8 CHARACTERS
           errorDiv.innerText = `Username too long! Please use ${maxNameLength} characters or less. / নামটি খুব লম্বা, ৮ অক্ষরের মধ্যে লিখুন।`;
           return;
       }
       
-      let styled = styleText(nameInput);
+      // 1. Get the first character: MUST be Normal and Uppercase
+      let firstChar = nameInput.charAt(0).toUpperCase();
+      
+      // 2. Initialize the Final Name part with the Normal first char
+      let finalNamePart = firstChar;
+
+      // 3. Handle the rest of the name (if it exists)
+      if (nameInput.length >= 2) {
+          let secondCharInput = nameInput.charAt(1);
+          
+          if (secondCharInput.toLowerCase() === 'o') {
+              // Rule 2 applied: If second char is 'o', it MUST be Normal and lowercase 'o'
+              finalNamePart += 'o';
+              // Style the rest of the name (from the 3rd character onwards)
+              if (nameInput.length > 2) {
+                 finalNamePart += styleText(nameInput.substring(2));
+              }
+          } else {
+              // No 'o' at the second spot, so we style the rest of the name (from the 2nd char onwards)
+              finalNamePart += styleText(nameInput.substring(1));
+          }
+      } 
+
       let suffix = gender === "male" ? "亗" : "♡";
-      let finalName = `ᵀᴿㅤ${styled}${suffix}`;
+      
+      // Assemble the final username
+      let finalName = `ᵀᴿㅤ${finalNamePart}${suffix}`;
 
       resultDiv.innerText = finalName;
       copyBtn.style.display = "block";
