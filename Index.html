@@ -3,33 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Team Ruthless Username Generator | TR Official Name Maker</title>
+  <title>Team Ruthless Username Generator</title>
+
+  <!-- GOOGLE SITE VERIFICATION -->
+  <meta name="google-site-verification" content="EQbnTAwrugIpwhWcx5KoGON7_1CVUh2ulAYqUDH3HtQ" />
 
   <!-- Primary SEO -->
-  <meta name="title" content="Team Ruthless Username Generator | TR Official Naming System">
-  <meta name="description" content="Create your official TR style name for Team Ruthless. Free Fire guild naming system, TR badge style generator, and clan username formatter. Join the TR family!">
-  <meta name="keywords" content="Team Ruthless, TR, username generator, TR name style, Free Fire, FF guild, gaming clan, Free Fire names, TR badge name, TR members, Team Ruthless official">
-  <meta name="author" content="Team Ruthless Developers">
-  <meta name="robots" content="index, follow">
+  <meta name="title" content="Team Ruthless | Free Fire TR Name Generator">
+  <meta name="description" content="Team Ruthless (TR) — Official Free Fire Guild Name Generator. Create stylish TR usernames instantly. Join the Team Ruthless naming style.">
+  <meta name="keywords" content="Team Ruthless, TR, Free Fire, name generator, TR name, FF guild, gaming name, free fire guild name">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://team-ruthless-naming.netlify.app/">
 
-  <!-- OpenGraph (Facebook, WhatsApp, Discord) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Team Ruthless Username Creator | Official TR Name Generator">
-  <meta property="og:description" content="Generate a clean TR-style username with our official Team Ruthless generator. Perfect for Free Fire players joining the TR guild!">
+  <!-- Open Graph (Facebook, WhatsApp, Instagram) -->
+  <meta property="og:title" content="Team Ruthless | TR Style Name Generator">
+  <meta property="og:description" content="Generate your stylish TR Name for Free Fire. Team Ruthless official name maker.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/hrobne2-bit/TEAM-RUTHLESS-/main/Images/tr_logo.jpg">
   <meta property="og:url" content="https://team-ruthless-naming.netlify.app/">
-  <meta property="og:image" content="https://raw.githubusercontent.com/hrobne2-bit/TEAM-RUTHLESS-/df85ee171c0b24a7d8fdbab2759511473e9677a1/Images/tr_logo.jpg">
+  <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TR Username Generator | Team Ruthless Official">
-  <meta name="twitter:description" content="Create your TR guild username with style. Free Fire players can generate pro names instantly!">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/hrobne2-bit/TEAM-RUTHLESS-/df85ee171c0b24a7d8fdbab2759511473e9677a1/Images/tr_logo.jpg">
+  <meta name="twitter:title" content="Team Ruthless | TR Name Generator">
+  <meta name="twitter:description" content="Create your official TR-style Free Fire name. Team Ruthless guild generator.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/hrobne2-bit/TEAM-RUTHLESS-/main/Images/tr_logo.jpg">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpg" href="images/tr_logo.jpg">
+  <!-- Robots -->
+  <meta name="robots" content="index, follow">
 
   <style>
     body {
@@ -214,28 +215,27 @@
       }
 
       if (nameInput.length > maxNameLength) {
-          errorDiv.innerText = `Username too long! Please use ${maxNameLength} characters or less. / নামটি খুব লম্বা, ৮ অক্ষরের মধ্যে লিখুন।`;
-          return;
+        errorDiv.innerText = "Username too long! 8 characters max. / নামটি খুব লম্বা, ৮ অক্ষরের মধ্যে লিখুন।";
+        return;
       }
 
       let firstChar = nameInput.charAt(0).toUpperCase();
       let finalNamePart = firstChar;
 
       if (nameInput.length >= 2) {
-          let secondCharInput = nameInput.charAt(1);
-          
-          if (secondCharInput.toLowerCase() === 'o') {
-              finalNamePart += 'o';
-              if (nameInput.length > 2) {
-                 finalNamePart += styleText(nameInput.substring(2));
-              }
-          } else {
-              finalNamePart += styleText(nameInput.substring(1));
+        let secondCharInput = nameInput.charAt(1);
+
+        if (secondCharInput.toLowerCase() === 'o') {
+          finalNamePart += 'o';
+          if (nameInput.length > 2) {
+            finalNamePart += styleText(nameInput.substring(2));
           }
+        } else {
+          finalNamePart += styleText(nameInput.substring(1));
+        }
       } 
 
       let suffix = gender === "male" ? "亗" : "♡";
-      
       let finalName = `ᵀᴿㅤ${finalNamePart}${suffix}`;
 
       resultDiv.innerText = finalName;
