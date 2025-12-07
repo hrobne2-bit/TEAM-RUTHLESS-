@@ -3,13 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Team Ruthless Username Generator</title>
+  <title>Team Ruthless Username Generator | TR Official Name Maker</title>
 
-  <meta name="description" content="Official Username Generator for Team Ruthless (TR) - Get your custom, stylized gaming tag now!">
-  <meta name="keywords" content="Team Ruthless, TR, Username Generator, Gaming Tag, Clan Name, Free Fire, PUBG, BGMI">
-  <meta name="author" content="Team Ruthless Developer">
-  <meta name="robots" content="index, follow"> 
-  
+  <!-- Primary SEO -->
+  <meta name="title" content="Team Ruthless Username Generator | TR Official Naming System">
+  <meta name="description" content="Create your official TR style name for Team Ruthless. Free Fire guild naming system, TR badge style generator, and clan username formatter. Join the TR family!">
+  <meta name="keywords" content="Team Ruthless, TR, username generator, TR name style, Free Fire, FF guild, gaming clan, Free Fire names, TR badge name, TR members, Team Ruthless official">
+  <meta name="author" content="Team Ruthless Developers">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://team-ruthless-naming.netlify.app/">
+
+  <!-- OpenGraph (Facebook, WhatsApp, Discord) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Team Ruthless Username Creator | Official TR Name Generator">
+  <meta property="og:description" content="Generate a clean TR-style username with our official Team Ruthless generator. Perfect for Free Fire players joining the TR guild!">
+  <meta property="og:url" content="https://team-ruthless-naming.netlify.app/">
+  <meta property="og:image" content="https://raw.githubusercontent.com/hrobne2-bit/TEAM-RUTHLESS-/df85ee171c0b24a7d8fdbab2759511473e9677a1/Images/tr_logo.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TR Username Generator | Team Ruthless Official">
+  <meta name="twitter:description" content="Create your TR guild username with style. Free Fire players can generate pro names instantly!">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/hrobne2-bit/TEAM-RUTHLESS-/df85ee171c0b24a7d8fdbab2759511473e9677a1/Images/tr_logo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpg" href="images/tr_logo.jpg">
+
   <style>
     body {
       margin: 0;
@@ -73,20 +94,16 @@
     }
 
     select, input {
-      /* FIXED: Reverting unnecessary margin tweaks, relying on 100% width in the centered card */
       width: 100%;
       padding: 10px;
       border: none;
       border-radius: 10px;
       outline: none;
-      margin-bottom: 15px; /* Keep this for spacing */
+      margin-bottom: 15px;
       font-size: 16px;
-      display: block; /* Ensure it behaves as a block element */
-      text-align: left; /* Ensure text starts at the left within the box */
+      display: block;
+      text-align: left;
     }
-    
-    /* NEW CSS FIX: Since the card text is centered, we need to ensure the input itself uses 100% width and aligns its internal content correctly. The input is now physically centered because the card is centered and it fills the card's width. */
-
 
     button {
       width: 100%;
@@ -125,7 +142,6 @@
       font-size: 14px;
     }
 
-    /* 📱 Mobile tweaks */
     @media (max-width: 600px) {
       h1 { font-size: 18px; }
       p, label { font-size: 13px; }
@@ -134,6 +150,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="logo">
     <img src="images/tr_logo.jpg" alt="TR Logo">
@@ -170,7 +187,6 @@
     };
 
     function styleText(text) {
-      // Style function only handles text from the 3rd character onwards (or 2nd if no 'o')
       return text.toLowerCase().split("").map(ch => styledMap[ch] || ch).join("");
     }
 
@@ -191,8 +207,7 @@
         errorDiv.innerText = "Please enter a Username / একটি নাম লিখুন।";
         return;
       }
-      
-      // NEW FIX 2: Check for spaces
+
       if (nameInput.includes(' ')) {
         errorDiv.innerText = "Username cannot contain spaces! / ইউজারনেমে কোনো ফাঁকা জায়গা থাকতে পারবে না।";
         return;
@@ -202,33 +217,25 @@
           errorDiv.innerText = `Username too long! Please use ${maxNameLength} characters or less. / নামটি খুব লম্বা, ৮ অক্ষরের মধ্যে লিখুন।`;
           return;
       }
-      
-      // 1. Get the first character: MUST be Normal and Uppercase
+
       let firstChar = nameInput.charAt(0).toUpperCase();
-      
-      // 2. Initialize the Final Name part with the Normal first char
       let finalNamePart = firstChar;
 
-      // 3. Handle the rest of the name (if it exists)
       if (nameInput.length >= 2) {
           let secondCharInput = nameInput.charAt(1);
           
           if (secondCharInput.toLowerCase() === 'o') {
-              // Rule 2 applied: If second char is 'o', it MUST be Normal and lowercase 'o'
               finalNamePart += 'o';
-              // Style the rest of the name (from the 3rd character onwards)
               if (nameInput.length > 2) {
                  finalNamePart += styleText(nameInput.substring(2));
               }
           } else {
-              // No 'o' at the second spot, so we style the rest of the name (from the 2nd char onwards)
               finalNamePart += styleText(nameInput.substring(1));
           }
       } 
 
       let suffix = gender === "male" ? "亗" : "♡";
       
-      // Assemble the final username
       let finalName = `ᵀᴿㅤ${finalNamePart}${suffix}`;
 
       resultDiv.innerText = finalName;
