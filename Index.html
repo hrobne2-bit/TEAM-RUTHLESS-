@@ -3,33 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Team Ruthless Username Generator</title>
+  <title>Free Fire Name Generator: Create Stylish Team Ruthless Usernames</title>
 
-  <!-- GOOGLE SITE VERIFICATION -->
   <meta name="google-site-verification" content="EQbnTAwrugIpwhWcx5KoGON7_1CVUh2ulAYqUDH3HtQ" />
 
-  <!-- Primary SEO -->
-  <meta name="title" content="Team Ruthless | Free Fire TR Name Generator">
-  <meta name="description" content="Team Ruthless (TR) — Official Free Fire Guild Name Generator. Create stylish TR usernames instantly. Join the Team Ruthless naming style.">
-  <meta name="keywords" content="Team Ruthless, TR, Free Fire, name generator, TR name, FF guild, gaming name, free fire guild name">
+  <meta name="title" content="Team Ruthless | Free Fire Name Generator">
+  <meta name="description" content="Team Ruthless — Official Free Fire Guild Name Generator. Create stylish Team Ruthless usernames instantly. Join the Team Ruthless naming style.">
+  <meta name="keywords" content="Team Ruthless, Free Fire, name generator, FF guild, gaming name, free fire guild name">
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://team-ruthless-naming.netlify.app/">
 
-  <!-- Open Graph (Facebook, WhatsApp, Instagram) -->
-  <meta property="og:title" content="Team Ruthless | TR Style Name Generator">
-  <meta property="og:description" content="Generate your stylish TR Name for Free Fire. Team Ruthless official name maker.">
+  <meta property="og:title" content="Team Ruthless | Name Generator (Team Ruthless Style)">
+  <meta property="og:description" content="Generate your stylish Team Ruthless Name for Free Fire. Team Ruthless official name maker.">
   <meta property="og:image" content="https://raw.githubusercontent.com/hrobne2-bit/TEAM-RUTHLESS-/main/Images/tr_logo.jpg">
   <meta property="og:url" content="https://team-ruthless-naming.netlify.app/">
   <meta property="og:type" content="website">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Team Ruthless | TR Name Generator">
-  <meta name="twitter:description" content="Create your official TR-style Free Fire name. Team Ruthless guild generator.">
+  <meta name="twitter:title" content="Team Ruthless Name Generator">
+  <meta name="twitter:description" content="Create your official Team Ruthless-style Free Fire name. Team Ruthless guild generator.">
   <meta name="twitter:image" content="https://raw.githubusercontent.com/hrobne2-bit/TEAM-RUTHLESS-/main/Images/tr_logo.jpg">
 
-  <!-- Robots -->
   <meta name="robots" content="index, follow">
 
   <style>
@@ -142,6 +136,27 @@
       color: #ff5555;
       font-size: 14px;
     }
+    
+    .content-links {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px dashed #ff000044;
+      max-width: 420px;
+      width: 100%;
+    }
+    .content-links h2 {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    .content-links a {
+        color: #ff0000;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
 
     @media (max-width: 600px) {
       h1 { font-size: 18px; }
@@ -154,11 +169,11 @@
 
 <body>
   <div class="logo">
-    <img src="images/tr_logo.jpg" alt="TR Logo">
+    <img src="images/tr_logo.jpg" alt="Team Ruthless Logo">
   </div>
 
   <div class="card">
-    <h1>Welcome to Team Ruthless!</h1>
+    <h1>Official Free Fire Name Generator (Team Ruthless Style)</h1>
     <p>আপনাকে Team Ruthless এ স্বাগতম! 🔥<br>
     You must have a custom Username to join. <br>
     আপনাকে অবশ্যই একটি কাস্টম Username নিতে হবে।</p>
@@ -178,6 +193,14 @@
     <div class="error" id="error"></div>
     <button id="copyBtn" style="display:none;" onclick="copyUsername()">Copy Username</button>
   </div>
+  
+  <div class="content-links">
+      <h2>Team Ruthless Name Inspiration & Resources</h2>
+      <a href="/best-tr-prefixes.html">🔥 Top 50 Stylish Free Fire Name Prefixes</a>
+      <a href="/free-fire-symbols.html">✨ Secret Free Fire Symbols for Names</a>
+      <a href="/legacy-guild-name-guide.html">📖 How to Choose a Legacy Free Fire Guild Name Guide</a>
+      </div>
+
 
   <script>
     const styledMap = {
@@ -235,6 +258,7 @@
         }
       } 
 
+      // ⚠️ Note: The prefix ᵀᴿㅤ is left here as it is the core function of the generator style.
       let suffix = gender === "male" ? "亗" : "♡";
       let finalName = `ᵀᴿㅤ${finalNamePart}${suffix}`;
 
