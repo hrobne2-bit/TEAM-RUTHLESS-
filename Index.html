@@ -3,274 +3,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Free Fire Name Generator: Create Stylish Team Ruthless Usernames</title>
-
-  <meta name="google-site-verification" content="EQbnTAwrugIpwhWcx5KoGON7_1CVUh2ulAYqUDH3HtQ" />
-
-  <meta name="title" content="Team Ruthless | Free Fire Name Generator">
-  <meta name="description" content="Team Ruthless — Official Free Fire Guild Name Generator. Create stylish Team Ruthless usernames instantly. Join the Team Ruthless naming style.">
-  <meta name="keywords" content="Team Ruthless, Free Fire, name generator, FF guild, gaming name, free fire guild name">
-
-  <link rel="canonical" href="https://team-ruthless-naming.netlify.app/">
-
-  <meta property="og:title" content="Team Ruthless | Name Generator (Team Ruthless Style)">
-  <meta property="og:description" content="Generate your stylish Team Ruthless Name for Free Fire. Team Ruthless official name maker.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/hrobne2-bit/TEAM-RUTHLESS-/main/Images/tr_logo.jpg">
-  <meta property="og:url" content="https://team-ruthless-naming.netlify.app/">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Team Ruthless Name Generator">
-  <meta name="twitter:description" content="Create your official Team Ruthless-style Free Fire name. Team Ruthless guild generator.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/hrobne2-bit/TEAM-RUTHLESS-/main/Images/tr_logo.jpg">
-
-  <meta name="robots" content="index, follow">
-
+  <title>Team Ruthless Name Maker | Official Guild Recruitment</title>
+  
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0d0d0d, #1a0000, #330000);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      min-height: 100vh;
-      padding: 20px;
-      text-align: center;
+    * { box-sizing: border-box; }
+    body { 
+      margin: 0; 
+      font-family: 'Poppins', sans-serif; 
+      background: linear-gradient(135deg, #0d0d0d, #1a0000, #330000); 
+      color: #fff; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      min-height: 100vh; 
+      padding: 20px; 
+      text-align: center; 
     }
 
-    .logo {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      border: 4px solid #ff0000;
-      box-shadow: 0 0 25px #ff0000aa;
+    .logo { 
+      width: 140px; height: 140px; 
+      border-radius: 50%; 
+      overflow: hidden; 
+      margin: 20px 0; 
+      border: 4px solid #ff0000; 
+      box-shadow: 0 0 25px #ff0000aa; 
     }
+    .logo img { width: 100%; height: 100%; object-fit: cover; }
 
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .card {
-      background: rgba(20, 0, 0, 0.8);
-      border: 2px solid #ff0000;
-      border-radius: 20px;
-      padding: 25px;
-      max-width: 420px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 0 20px #ff000088;
-    }
-
-    h1 {
-      color: #ff3333;
-      margin-bottom: 10px;
-      text-shadow: 0 0 15px #ff0000;
-      font-size: 22px;
-    }
-
-    p {
-      font-size: 14px;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-
-    label {
-      display: block;
-      margin: 10px 0 5px;
-      font-size: 14px;
-    }
-
-    select, input {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 10px;
-      outline: none;
-      margin-bottom: 15px;
-      font-size: 16px;
-      display: block;
-      text-align: left;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      background: #ff0000;
-      color: #fff;
-      border: none;
-      border-radius: 15px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-      font-weight: bold;
-      text-transform: uppercase;
-      box-shadow: 0 0 15px #ff0000aa;
-      margin-top: 10px;
-    }
-
-    button:hover {
-      background: #cc0000;
-      box-shadow: 0 0 25px #ff0000;
-    }
-
-    .result {
-      margin-top: 20px;
-      padding: 15px;
-      background: #111;
-      border-radius: 10px;
-      font-size: 18px;
-      border: 1px solid #ff0000;
-      word-break: break-all;
-    }
-
-    .error {
-      margin-top: 10px;
-      color: #ff5555;
-      font-size: 14px;
+    .card { 
+      background: rgba(20, 0, 0, 0.85); 
+      border: 2px solid #ff0000; 
+      border-radius: 20px; 
+      padding: 25px; 
+      max-width: 420px; 
+      width: 100%; 
+      box-shadow: 0 0 20px #ff000088; 
+      margin-bottom: 30px;
     }
     
-    .content-links {
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px dashed #ff000044;
-      max-width: 420px;
-      width: 100%;
-    }
-    .content-links h2 {
-        font-size: 16px;
-        color: #fff;
-        margin-bottom: 10px;
-    }
-    .content-links a {
-        color: #ff0000;
-        text-decoration: none;
-        display: block;
-        margin-bottom: 5px;
-        font-size: 14px;
+    .input-group { width: 100%; text-align: left; }
+    label { display: block; margin: 10px 0 5px; font-size: 14px; color: #ffaaaa; }
+    input, select { 
+      width: 100%; padding: 12px; border: 1px solid #440000; border-radius: 10px; 
+      margin-bottom: 15px; font-size: 16px; background: #111; color: #fff; outline: none;
     }
 
-
-    @media (max-width: 600px) {
-      h1 { font-size: 18px; }
-      p, label { font-size: 13px; }
-      .card { padding: 20px; }
-      .result { font-size: 16px; }
+    button { 
+      width: 100%; padding: 14px; background: #ff0000; color: #fff; border: none; 
+      border-radius: 15px; font-size: 16px; cursor: pointer; font-weight: bold; 
+      text-transform: uppercase; transition: 0.3s;
     }
+
+    .result { 
+      margin-top: 20px; padding: 15px; background: #000; border-radius: 10px; 
+      border: 1px dashed #ff0000; word-break: break-all; min-height: 50px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+    }
+
+    .scroll-info { margin: 20px 0; color: #ff3333; font-size: 14px; animation: bounce 2s infinite; }
+    @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-5px);} 60% {transform: translateY(-3px);} }
+
+    .seo-container { max-width: 420px; width: 100%; text-align: left; margin-bottom: 40px; }
+    details { background: rgba(255, 0, 0, 0.05); border: 1px solid #ff000033; border-radius: 10px; padding: 12px; margin-bottom: 10px; }
+    summary { cursor: pointer; font-weight: bold; color: #ff6666; font-size: 14px; }
+    .seo-content { font-size: 13px; color: #ccc; margin-top: 10px; line-height: 1.6; }
+
+    .contact-dropdown { max-width: 420px; width: 100%; margin-bottom: 50px; }
+    .leader-box { 
+      display: flex; align-items: center; background: rgba(40, 0, 0, 0.8); 
+      border: 1px solid #ff0000; border-radius: 15px; padding: 12px; 
+      margin-top: 10px; text-decoration: none; color: white; 
+    }
+    .leader-img { width: 55px; height: 55px; border-radius: 50%; border: 2px solid #ff0000; margin-right: 15px; object-fit: cover; }
+    .leader-name { font-weight: bold; font-size: 15px; display: block; color: #ff3333; }
+
+    #toast {
+      visibility: hidden; min-width: 280px; background-color: #ff0000; color: #fff; 
+      text-align: center; border-radius: 12px; padding: 16px; position: fixed; 
+      z-index: 1000; left: 50%; bottom: 30px; transform: translateX(-50%); 
+      font-weight: bold; box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); border: 2px solid #fff;
+    }
+    #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+    @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+    @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+
+    footer { padding: 30px; font-size: 13px; color: #888; border-top: 1px solid #440000; width: 100%; background: #050505; }
   </style>
 </head>
-
 <body>
+
   <div class="logo">
     <img src="images/tr_logo.jpg" alt="Team Ruthless Logo">
   </div>
 
   <div class="card">
-    <h1>Official Free Fire Name Generator (Team Ruthless Style)</h1>
-    <p>আপনাকে Team Ruthless এ স্বাগতম! 🔥<br>
-    You must have a custom Username to join. <br>
-    আপনাকে অবশ্যই একটি কাস্টম Username নিতে হবে।</p>
-
-    <label for="gender">Gender / লিঙ্গ</label>
-    <select id="gender">
-      <option value="male">Male (亗)</option>
-      <option value="female">Female (♡)</option>
-    </select>
-
-    <label for="name">Username / ব্যবহারকারীর নাম</label>
-    <input type="text" id="name" placeholder="Enter your name... / নাম লিখুন...">
-
-    <button onclick="generateName()">Get Username</button>
-
-    <div class="result" id="result"></div>
-    <div class="error" id="error"></div>
-    <button id="copyBtn" style="display:none;" onclick="copyUsername()">Copy Username</button>
+    <h1>Team Ruthless Name Maker</h1>
+    <div class="input-group">
+      <label>Select Gender</label>
+      <select id="gender">
+        <option value="male">Male (亗)</option>
+        <option value="female">Female (♡)</option>
+      </select>
+      <label>Enter Username</label>
+      <input type="text" id="name" placeholder="E.g. Killer">
+    </div>
+    <button onclick="generateName()">Generate & Copy</button>
+    <div class="result" id="result">Your Name Will Appear Here</div>
   </div>
-  
-  <div class="content-links">
-      <h2>Team Ruthless Name Inspiration & Resources</h2>
-      <a href="/best-tr-prefixes.html">🔥 Top 50 Stylish Free Fire Name Prefixes</a>
-      <a href="/free-fire-symbols.html">✨ Secret Free Fire Symbols for Names</a>
-      <a href="/legacy-guild-name-guide.html">📖 How to Choose a Legacy Free Fire Guild Name Guide</a>
-      </div>
 
+  <div class="scroll-info">Scroll down to join the hunt! 👇</div>
+
+  <div class="seo-container">
+    <details><summary>1. How do I join Team Ruthless?</summary><div class="seo-content">The only way to join is by contacting our leaders via TikTok. Check the "Contact Leadership" section at the bottom.</div></details>
+    <details><summary>2. Is the TR prefix mandatory?</summary><div class="seo-content">Yes, the ᵀᴿㅤ prefix is the official mark of our guild members. No exceptions.</div></details>
+    <details><summary>3. What symbols do we use?</summary><div class="seo-content">We use the King Crown (亗) for male members and the Heart (♡) for female members.</div></details>
+    <details><summary>4. Can I use spaces in my name?</summary><div class="seo-content">No, spaces are not allowed in the official Team Ruthless naming format to keep it clean.</div></details>
+    <details><summary>5. What is the max name length?</summary><div class="seo-content">Keep your nickname under 8 characters so the TR prefix fits within the Free Fire 12-char limit.</div></details>
+    <details><summary>6. How do I get my name stylized?</summary><div class="seo-content">Our tool converts your text into the specific "Ruthless" font automatically for you.</div></details>
+    <details><summary>7. Where can I find guild news?</summary><div class="seo-content">Follow the leaders' TikTok accounts for all official guild updates and recruitment news.</div></details>
+    <details><summary>8. Is this the official generator?</summary><div class="seo-content">Yes, this is the official naming tool for Team Ruthless fans, recruits, and guild members.</div></details>
+    <details><summary>9. Do you support PUBG/BGMI names?</summary><div class="seo-content">While made for Free Fire, our stylish fonts work for any battle royale game profile or social media.</div></details>
+    <details><summary>10. Who built this system?</summary><div class="seo-content">This system was co-developed by Abu Bakkar (AI) to support the growing Team Ruthless legacy.</div></details>
+  </div>
+
+  <div class="contact-dropdown">
+    <details>
+      <summary style="background:#ff0000; color:white; padding:15px; border-radius:12px; font-weight:900;">🔥 CONTACT LEADERS TO JOIN</summary>
+      
+      <a href="https://vm.tiktok.com/ZS91SJfwwxJdw-ygpuO/" class="leader-box" target="_blank">
+        <img src="assets/1nd_ldr.png" class="leader-img">
+        <div class="leader-info"><span class="leader-name">Official 1st Leader</span><span>TikTok ↗️</span></div>
+      </a>
+
+      <a href="https://vm.tiktok.com/ZS91SJmdaaVQ5-9opkB/" class="leader-box" target="_blank">
+        <img src="assets/2nd_ldr.png" class="leader-img">
+        <div class="leader-info"><span class="leader-name">Official 2nd Leader</span><span>TikTok ↗️</span></div>
+      </a>
+
+      <a href="https://wa.me/+8801336069188" class="leader-box" target="_blank">
+        <img src="images/tr_logo.jpg" class="leader-img"> <div class="leader-info"><span class="leader-name">Team Ruthless WhatsApp</span><span>Support Chat ↗️</span></div>
+      </a>
+    </details>
+  </div>
+
+  <div id="toast">NAME COPIED! GO TO TIKTOK ✅</div>
+
+  <footer>
+    Built by Abu Bakkar (AI) & Team Ruthless © 2026<br>
+    The Legacy Continues.
+  </footer>
 
   <script>
-    const styledMap = {
-      "a": "α", "b": "в", "c": "c", "d": "d", "e": "є", "f": "f", "g": "g",
-      "h": "н", "i": "í", "j": "j", "k": "k", "l": "l", "m": "m", "n": "n",
-      "o": "σ", "p": "p", "q": "p", "r": "я", "s": "ѕ", "t": "t",
-      "u": "υ", "v": "v", "w": "w", "x": "χ", "y": "ч", "z": "z"
-    };
-
-    function styleText(text) {
-      return text.toLowerCase().split("").map(ch => styledMap[ch] || ch).join("");
-    }
+    const styledMap = {"a":"α","b":"в","c":"c","d":"d","e":"є","f":"f","g":"g","h":"н","i":"í","j":"j","k":"k","l":"l","m":"m","n":"n","o":"σ","p":"p","q":"p","r":"я","s":"ѕ","t":"t","u":"υ","v":"v","w":"w","x":"χ","y":"ч","z":"z"};
+    function styleText(t){return t.toLowerCase().split("").map(c=>styledMap[c]||c).join("")}
+    function showToast(){ var x=document.getElementById("toast"); x.className="show"; setTimeout(function(){x.className=x.className.replace("show","");},3000); }
 
     function generateName() {
       const nameInput = document.getElementById("name").value.trim();
       const gender = document.getElementById("gender").value;
-      const resultDiv = document.getElementById("result");
-      const errorDiv = document.getElementById("error");
-      const copyBtn = document.getElementById("copyBtn");
-      
-      const maxNameLength = 8; 
-
-      resultDiv.innerHTML = "";
-      errorDiv.innerHTML = "";
-      copyBtn.style.display = "none";
-
-      if (nameInput.length === 0) {
-        errorDiv.innerText = "Please enter a Username / একটি নাম লিখুন।";
-        return;
-      }
-
-      if (nameInput.includes(' ')) {
-        errorDiv.innerText = "Username cannot contain spaces! / ইউজারনেমে কোনো ফাঁকা জায়গা থাকতে পারবে না।";
-        return;
-      }
-
-      if (nameInput.length > maxNameLength) {
-        errorDiv.innerText = "Username too long! 8 characters max. / নামটি খুব লম্বা, ৮ অক্ষরের মধ্যে লিখুন।";
-        return;
-      }
-
-      let firstChar = nameInput.charAt(0).toUpperCase();
-      let finalNamePart = firstChar;
-
-      if (nameInput.length >= 2) {
-        let secondCharInput = nameInput.charAt(1);
-
-        if (secondCharInput.toLowerCase() === 'o') {
-          finalNamePart += 'o';
-          if (nameInput.length > 2) {
-            finalNamePart += styleText(nameInput.substring(2));
-          }
-        } else {
-          finalNamePart += styleText(nameInput.substring(1));
-        }
-      } 
-
-      // ⚠️ Note: The prefix ᵀᴿㅤ is left here as it is the core function of the generator style.
-      let suffix = gender === "male" ? "亗" : "♡";
-      let finalName = `ᵀᴿㅤ${finalNamePart}${suffix}`;
-
-      resultDiv.innerText = finalName;
-      copyBtn.style.display = "block";
-    }
-
-    function copyUsername() {
-      const resultText = document.getElementById("result").innerText;
-      navigator.clipboard.writeText(resultText).then(() => {
-        alert("Username copied! / নাম কপি হয়েছে ✅");
-      });
+      const res = document.getElementById("result");
+      if(!nameInput) return;
+      let p = nameInput.charAt(0).toUpperCase() + (nameInput.length > 1 ? styleText(nameInput.substring(1)) : "");
+      let final = `ᵀᴿㅤ${p}${gender === "male" ? "亗" : "♡"}`;
+      res.innerText = final;
+      navigator.clipboard.writeText(final).then(() => { showToast(); });
     }
   </script>
 </body>
