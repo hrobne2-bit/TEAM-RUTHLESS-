@@ -184,7 +184,7 @@
   </footer>
 
   <script>
-    const styledMap = {"a":"α","b":"в","c":"c","d":"d","e":"є","f":"f","g":"g","h":"н","i":"í","j":"j","k":"k","l":"l","m":"m","n":"n","o":"σ","p":"p","q":"p","r":"я","s":"ѕ","t":"t","u":"υ","v":"v","w":"w","x":"χ","y":"ч","z":"z"};
+    const styledMap = {"a":"α","b":"в","c":"c","d":"d","e":"є","f":"f","g":"g","h":"н","i":"í","j":"j","k":"k","l":"l","m":"m","n":"n","o":"σ","p":"p","q":"p","r":"я","s":"ѕ","t":"t","u":"υ","v":"v","w":"w","x":"×","y":"ч","z":"z"};
     function styleText(t){return t.toLowerCase().split("").map(c=>styledMap[c]||c).join("")}
     function showToast(){ var x=document.getElementById("toast"); x.className="show"; setTimeout(function(){x.className=x.className.replace("show","");},3000); }
 
